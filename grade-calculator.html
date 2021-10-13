@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+</head>
+
+<body>
+    <h1>Grade Calculator</h1>
+    <p>Enter your percentage here</p>
+    <br />
+    <input type="number" id="num" />
+    <button onclick="gradeCalculator()">Calculate</button>
+
+    <div id="result"></div>
+
+
+    <script>
+
+        const gradeCalculator = () => {
+            let number = document.getElementById('num').value;
+
+            if (number > 79) {
+                document.getElementById('result').innerHTML = "<p> Your grade is A+ </p>";
+            }
+
+            else if (number > 69 && number <= 80) {
+                document.getElementById('result').innerHTML = "<p> Your grade is A </p>";
+            }
+
+
+            else if (number > 59 && number <= 70) {
+                document.getElementById('result').innerHTML = "<p> Your grade is B </p>";
+            }
+
+            else if (number > 49 && number <= 60) {
+                document.getElementById('result').innerHTML = "<p> Your grade is C </p>";
+            }
+
+            else {
+                document.getElementById('result').innerHTML = "You Failed";
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
